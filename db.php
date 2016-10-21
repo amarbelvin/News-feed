@@ -68,7 +68,7 @@
 				echo '<font color="green">Inserting new item..</font><br/>';
 
 				// Prepare our insert statement
-				$item_insert_sql = "INSERT INTO FEED6(item_id, feed_url, item_title, item_description, item_date, item_url, fetch_date) VALUES ('" . $item_id . "', '" . $feed_url . "', '". $item_title ."', '" . $item_desc . "', '" . $item_date . "', '" . $item_url . "', '" . $fetch_date . "')";
+				$item_insert_sql = "INSERT INTO FEED6(item_id, feed_url, item_content, item_description, item_date, item_url, fetch_date) VALUES ('" . $item_id . "', '" . $feed_url . "', '". $item_title ."', '" . $item_desc . "', '" . $item_date . "', '" . $item_url . "', '" . $fetch_date . "')";
 
 				// Run the query
 				$insert_item = mysql_query($item_insert_sql, $db);
