@@ -14,11 +14,13 @@
 	libxml_use_internal_errors(true);
 	$RSS_DOC = simpleXML_load_file($feed_url);
 
-	if (!$RSS_DOC) {
+	if (!$RSS_DOC)
+	{
 		echo "Failed loading XML\n";
 
 		// An y errors, loop them out
-		foreach (libxml_get_errors() as $error) {
+		foreach (libxml_get_errors() as $error)
+		{
 			echo "\t", $error->message;
 		}
 	}
