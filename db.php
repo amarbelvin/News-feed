@@ -63,7 +63,8 @@
 			$item_exists = mysql_query($item_exists_sql, $db);
 
 			// Do we have rows?
-			if (mysql_num_rows($item_exists) < 1) {
+			if (mysql_num_rows($item_exists) < 1)
+			{
 
 				echo '<font color="green">Inserting new item..</font><br/>';
 
@@ -74,15 +75,19 @@
 				$insert_item = mysql_query($item_insert_sql, $db);
 
 				// Failed insert, throw an error and die
-				if (!$insert_item) die('Av -- Could not enter data: --' . mysql_error());
+				if (!$insert_item) 
+					die('Av -- Could not enter data: --' . mysql_error());
 
-			} else {
+			} 
+			else
+			{
 				echo '<font color="blue">Not inserting existing item..</font><br/>';
 			}
 
 			echo "<br/>";
 		}
-	} catch (Exception $e) {
+	} 
+          catch (Exception $e) {
 		echo 'Caught exception: ',  $e->getMessage(), "\n";
 	}
 ?>
