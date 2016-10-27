@@ -18,14 +18,18 @@ catch (ClassNotFoundException e)
 	e.printStackTrace();
 	return;
 }
-try{
-
+	
+try
+{
 conn = DriverManager.getConnection(url, username, password);
-if (conn!= null) {
-		System.out.println("You made it, take control your database now!");
-	} else {
-		System.out.println("Failed to make connection!");
-	}
+if (conn!= null) 
+{
+	System.out.println("You made it, take control your database now!");
+} 
+else 
+{
+	System.out.println("Failed to make connection!");
+}
     
 stmt = conn.createStatement();
 String sql = "CREATE TABLE FEED6" +
