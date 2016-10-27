@@ -8,13 +8,16 @@ String password = "";
 Connection conn=null;
 Statement stmt = null;
 System.out.println("Connecting database...");
-try {
-		Class.forName("com.mysql.jdbc.Driver");
-	} catch (ClassNotFoundException e) {
-		System.out.println("java AV --Where is your MySQL JDBC Driver?");
-		e.printStackTrace();
-		return;
-	}
+try 
+{
+	Class.forName("com.mysql.jdbc.Driver");
+} 
+catch (ClassNotFoundException e) 
+{
+	System.out.println("java AV --Where is your MySQL JDBC Driver?");
+	e.printStackTrace();
+	return;
+}
 try{
 
 conn = DriverManager.getConnection(url, username, password);
